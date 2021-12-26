@@ -10,13 +10,14 @@ function App() {
                         <img src={require('./image/cloud.jpg')} />
                     </div>
                 </div>
+                <div className="bottom-bg">
+
+                </div>
                 <div className="main-img-ct">
-                    <img className="shilouette-image-1" src={require('./image/hatsune_miku__vocaloid____render__034_by_hansume_dbbbjr4(1).png')}/>
-                    <img className="shilouette-image-2" src={require('./image/hatsune_miku__vocaloid____render__034_by_hansume_dbbbjr4(1).png')}/>
-                    <img className="shilouette-image-3" src={require('./image/hatsune_miku__vocaloid____render__034_by_hansume_dbbbjr4(1).png')}/>
-                    <img className="shilouette-image-4" src={require('./image/hatsune_miku__vocaloid____render__034_by_hansume_dbbbjr4(1).png')}/>
                     <img className="main-image" src={require('./image/hatsune_miku__vocaloid____render__034_by_hansume_dbbbjr4(1).png')}/>
                 </div>
+                <img className='title' src={require('./image/1639821405757.png')}/>
+                <div className="footer"></div>
             </section>
         </section>
     )
