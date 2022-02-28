@@ -16,12 +16,15 @@ function App() {
                         </div>
                     </div>
                     <div className="bottom-bg"/>
-                    <Nav/>
                     {/* CONTENT FOR ROUTER */}
                     <Routes>
                         <Route path="/" element={<Main/>} />
                     </Routes>
-                    <div className="footer"></div>
+                    <div className="footer">
+                        <p className="myname">hello</p>
+                        <p className="date">hello</p>
+                        <p className="time">hello</p>
+                    </div>
                 </section>
             </section>
         </Router>
