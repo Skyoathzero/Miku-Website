@@ -83,10 +83,17 @@ html, body { height: 100%; }
   padding-top: 8px;
 }
 
-.footer > p{
-  position:relative;
+.footer > .date{
+  margin: 0 1.8em 0 1.8em;
+  display: flex;
+  bottom: 0.15em;
 }
 
+.footer > .date>*{
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #57bef5;
+}
 .footer > div{
   position:relative;
 }
@@ -99,12 +106,16 @@ html, body { height: 100%; }
 }
 
 .footer > .time>*{
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: bolder;
   color: #57bef5;
   
 }
 
+.footer > .time >.day-night-icon{
+  right: -1.4em;
+  position: absolute;
+}
 
 
 

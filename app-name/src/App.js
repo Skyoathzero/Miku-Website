@@ -2,10 +2,14 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Redirect, Routes } from 'react-router-dom'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import {BsFillMoonFill,BsFillSunFill} from 'react-icons/bs'
+import {AiFillHeart} from 'react-icons/ai'
 
 // PAGES / CONTENT
 import Main from './pages/Main.js'
 import Nav from './Sidenav.js'
+
+
 function App() {
     return (
         <Router>
@@ -23,8 +27,7 @@ function App() {
                         <Route path="/" element={<Main />} />
                     </Routes>
                     <div className="footer">
-                        <p className="myname">hello</p>
-                        <p className="date">hello</p>
+                        <Dates/>
                         <Time />
                     </div>
                 </section>
@@ -37,7 +40,7 @@ function Time() {
     const [hours,setHours]     = useState(new Date().getHours())
     const [minutes,setMinutes] = useState(new Date().getMinutes())
     const [seconds,setSeconds] = useState(new Date().getSeconds())
-    
+    const [isDay,setIsDay]     = useState(false)
     useEffect(()=>{
         setInterval(()=>{
             let tHours = new Date().getHours()
@@ -55,6 +58,12 @@ function Time() {
                 setSeconds('0'+tSeconds.toString())
             }
             else{setSeconds(tSeconds.toString())}
+            if(tHours > 4 && tHours<16){
+                setIsDay(true)
+            }
+            else{
+                setIsDay(false)
+            }
         },1000)
     })
     return (
@@ -70,9 +79,47 @@ function Time() {
             <section>
                 <p>{seconds + 'S'}</p>
             </section>
+            <span className='day-night-icon'>
+                {isDay?(<BsFillSunFill/>):(<BsFillMoonFill/>)}
+            </span>
         </div>
     )
 }
+
+function Dates() {
+    // ARRAY
+    const aMonth =['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const aDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    // ARRAY
+
+    const[day,setDay]     = useState([new Date().getDate() , new Date().getDay()])
+    const[month,setMonth] = useState(new Date().getMonth())
+    const[year,setYear]   = useState(new Date().getFullYear())
+
+    useEffect(()=>{
+        setInterval(()=>{
+            setDay([new Date().getDate() , new Date().getDay()])
+            setMonth(new Date().getMonth())
+            setYear(new Date().getFullYear())
+
+        },100000)
+    })
+    return (
+        <div className='date'>
+            <section className='day-dates'>
+                <p>
+                    {aDay[day[1]] + " "+day[0].toString() + ", "}
+                </p>
+            </section>
+            <section className='month-year'>
+                <p>
+                    {aMonth[month] + " " + year} 
+                </p>
+            </section>
+        </div>
+    )
+}
+
 
 export default App
 
