@@ -5,7 +5,7 @@
   
 }
 body {
-  font-family: "Gaegu";
+  font-family: "Consolas";
   
 }
 html, body { height: 100%; }
@@ -127,6 +127,61 @@ html, body { height: 100%; }
   top: 25em;
   transform: rotate(-7.5deg);
 }
+
+.about-cnt{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 23.25em;
+  height: 7.5em;
+  border-radius: 0 0 0 3.25em;
+  box-shadow: 0 0 0.5em 0 #57bef5;
+  background-position: center
+}
+
+.about-cnt #main{
+  position: absolute;
+  top: 0em;
+  right: -0.5em;
+  width: 10em;
+  height: 10em;
+  background-color: white;
+  border-radius: 50%;
+  border-color: #57bef5;
+  border-width: 1em;
+  border-style:solid;
+  box-shadow: 0px 0 0.2em 0 #57bef5  ;
+}
+
+.about-cnt #twitter{
+  position: absolute;
+  top: -0.25em;
+  right: 9.45em;
+  width: 6em;
+  height: 6em;
+  background-color:white;
+  border-radius: 50%;
+  border-color: #ff96be;
+  border-width: 0.75em;
+  border-style:solid;
+  box-shadow: 0px 0 0.2em 0 #ff4f7b  ;
+
+}
+.about-cnt #github{
+  position: absolute;
+  top:  -0.25em;
+  right: 16em;
+  width: 6em;
+  height: 6em;
+  background-color:white;
+  border-radius: 50%;
+  border-color: #ff96be;
+  border-width: 0.75em;
+  border-style:solid;
+  box-shadow: 0px 0 0.2em 0 #ff4f7b  ;
+
+}
+
 /* navbar ------------------------------------------------------------------------------------ */
 .sidebar{
   box-sizing:border-box;
