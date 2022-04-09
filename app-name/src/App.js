@@ -1,40 +1,54 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Redirect, Routes } from 'react-router-dom'
-import { useState } from 'react'
+import { useState ,  createContext, useContext } from 'react'
 import { useEffect } from 'react'
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 import { AiFillHeart } from 'react-icons/ai'
 import background from './image/cloud-anime.gif'
+import AboutMeCard from './AboutMeCard'
 
 // PAGES / CONTENT
 import Main from './pages/Main.js'
 import Nav from './Sidenav.js'
 
+const ContextApi = createContext();
 
-function App() {
+function App() {    
+    
+
+    const [isOpen,setIsOpen] = useState(false)
+
+    const contextApiObject= {
+        setIsOpen: setIsOpen,
+        isOpen : isOpen
+
+    }
     return (
         <Router>
-            <section className="web-wrapper">
-                <section className="main-section">
-                    <div className="upper-bg"></div>
-                    <div className="circle-outer">
-                        <div className="circle-inner">
-                            <img src={require('./image/cloud.jpg')} />
+            <ContextApi.Provider value={contextApiObject}>
+                <section className="web-wrapper">
+                    <AboutMeCard open={isOpen}/>
+                    <section className="main-section">
+                        <div className="upper-bg"></div>
+                        <div className="circle-outer">
+                            <div className="circle-inner">
+                                <img src={require('./image/cloud.jpg')} />
+                            </div>
                         </div>
-                    </div>
-                    <div className="bottom-bg" />
-                    {/* CONTENT FOR ROUTER */}
-                    <About />
-                    <Routes>
-                        <Route path="/" element={<Main />} />
-                    </Routes>
-                    
-                    <div className="footer">
-                        <Dates />
-                        <Time />
-                    </div>
+                        <About />
+                        <div className="bottom-bg" />
+                        {/* CONTENT FOR ROUTER */}
+                        <Routes>
+                            <Route path="/" element={<Main/>} />
+                        </Routes>
+                        
+                        <div className="footer">
+                            <Dates />
+                            <Time />
+                        </div>
+                    </section>
                 </section>
-            </section>
+            </ContextApi.Provider>
         </Router>
     )
 }
@@ -126,10 +140,11 @@ function Dates() {
 
 
 function About() {
+    const openAboutMe = useContext(ContextApi)
     return (
         <>
             <div className='about-cnt' style={{backgroundImage:`url(${background})`}}>
-                <section id='main'>
+                <section id='main' onClick={()=>{openAboutMe.setIsOpen(!openAboutMe.isOpen)}}>
                     <section id='twitter'></section>
                     <section id='github'></section>
                 </section>
