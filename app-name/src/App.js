@@ -7,6 +7,8 @@ import { AiFillHeart } from 'react-icons/ai'
 import background from './image/cloud-anime.gif'
 import AboutMeCard from './AboutMeCard'
 
+
+
 // PAGES / CONTENT
 import Main from './pages/Main.js'
 import Nav from './Sidenav.js'
@@ -27,7 +29,8 @@ function App() {
         <Router>
             <ContextApi.Provider value={contextApiObject}>
                 <section className="web-wrapper">
-                    <AboutMeCard open={isOpen}/>
+
+                    <AboutMeCard open={isOpen} close={()=>setIsOpen(false)}/>
                     <section className="main-section">
                         <div className="upper-bg"></div>
                         <div className="circle-outer">
