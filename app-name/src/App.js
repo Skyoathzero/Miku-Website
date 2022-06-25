@@ -6,12 +6,10 @@ import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 import { AiFillHeart } from 'react-icons/ai'
 import background from './image/cloud-anime.gif'
 import AboutMeCard from './AboutMeCard'
-
-
-
 // PAGES / CONTENT
 import Main from './pages/Main.js'
 import Nav from './Sidenav.js'
+
 
 const ContextApi = createContext();
 
@@ -25,6 +23,8 @@ function App() {
         isOpen : isOpen
 
     }
+
+    
     return (
         <Router>
             <ContextApi.Provider value={contextApiObject}>
@@ -142,8 +142,13 @@ function Dates() {
 
 
 
+
+
 function About() {
     const openAboutMe = useContext(ContextApi)
+
+    
+    const dctoken = require('./TOKEN.json');
     return (
         <>
             <div className='about-cnt' style={{backgroundImage:`url(${background})`}}>

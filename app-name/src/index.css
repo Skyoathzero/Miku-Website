@@ -410,6 +410,26 @@ padding-left: 0.5em;
   transform: translate(0%, -50%) translateZ(30px);
   box-sizing: border-box;
 }
+
+.about-me-card-bottom-menu>li>span>a{
+  position: relative;
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: Poppins !important;
+  margin-left: 0.8em;
+  bottom: -0.2em;
+  color: white;
+  transition: all 0.1s ease-out;
+  transform: translateZ(30px);
+  
+}
+.about-me-card-bottom-menu>li#gmail>img{
+  display: inline-block;
+  border-radius: 0.7em;
+  transform: scale(0.85) translate(0,-60%);
+  filter: invert(70%);
+}
+
 .about-hover-me{
   position: absolute;
   
@@ -427,37 +447,19 @@ padding-left: 0.5em;
 }
 .about-hover-me>b>#about-point-down{
   transform: rotate(90deg);
+  position: absolute;
+  top: 10%;
+  margin-left: 5%;
 
 }
 
 
-.about-me-card-bottom-menu>li>span{
-  position: relative;
-  font-size: 1rem;
-  font-weight: 800;
-  font-family: Poppins !important;
-  margin-left: 0.8em;
-  bottom: -0.2em;
-  color: white;
-  transition: all 0.1s ease-out;
-  transform: translateZ(30px);
-  
-}
-
-.about-me-card-bottom-menu>li#discord>img{
-  display: inline-block;
-  width: 38.4px;
-  height: 38.4px;
-  top: 55%;
-  left:0%;
-  transform: scale(1.2) translate(0%, -50%);
-}
 
 .about-me-card-bottom-menu>li:hover{
   width: 8rem;
 }
 
-span.hovered{
+span.hovered>a{
   bottom: 0.5em !important;
   color: transparent !important;
   transition: color 1.25s ease !important;
