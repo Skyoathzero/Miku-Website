@@ -5,13 +5,21 @@ import { useEffect } from 'react'
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 import { AiFillHeart } from 'react-icons/ai'
 import background from './image/cloud-anime.gif'
-import AboutMeCard from './AboutMeCard'
+
 // PAGES / CONTENT
 import Main from './pages/Main.js'
 import Nav from './Sidenav.js'
+import AboutMeHeader from './AboutMeHeader'
+import AboutMeCard from './AboutMeCard'
 
+// css
 
+import './about-me.css'
+import './about-me-header.css'
 const ContextApi = createContext();
+
+
+
 
 function App() {    
     
@@ -38,7 +46,7 @@ function App() {
                                 <img src={require('./image/cloud.jpg')} />
                             </div>
                         </div>
-                        <About />
+                        <AboutMeHeader ContextApi={ContextApi}/>
                         <div className="bottom-bg" />
                         {/* CONTENT FOR ROUTER */}
                         <Routes>
@@ -143,24 +151,6 @@ function Dates() {
 
 
 
-
-function About() {
-    const openAboutMe = useContext(ContextApi)
-
-    
-    const dctoken = require('./TOKEN.json');
-    return (
-        <>
-            <div className='about-cnt' style={{backgroundImage:`url(${background})`}}>
-                <section id='main' onClick={()=>{openAboutMe.setIsOpen(!openAboutMe.isOpen)}}>
-                    <section id='twitter'></section>
-                    <section id='github'></section>
-                </section>
-            </div>
-        </>
-
-    )
-}
 
 export default App
 

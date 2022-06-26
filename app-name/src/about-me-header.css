@@ -1,0 +1,95 @@
+.about-header-cnt{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 23.25em;
+    height: 7.5em;
+    border-radius: 0 0 0 3.25em;
+    box-shadow: 0 0 0.5em 0 #57bef5;
+
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.6);
+    background: rgba(251, 251, 251, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.about-header-pfp{
+    position: absolute;
+    top: 0em;
+    right: -0.56em;
+    width: 10em;
+    height: 10em;
+    background-color: white;
+    border-radius: 50%;
+    border-color: #57bef5;
+    border-width: 1em;
+    border-style: solid;
+    box-shadow: 0px 0 0.2em 0 #57bef5;
+    background-position: center;
+    background-size: 150%;
+    
+}
+
+
+.about-header-info{
+    position: absolute;
+    height: 4em;
+    width: 13em;
+    background-color: white;
+    right: 9.5em;
+    top: 2em;
+    border-radius: 1em 1em 1em 3em;
+    border-color: #ff4f7b;
+    border-width: 0.34em;
+    border-style: solid;
+    text-align:center;
+}
+
+.about-header-info p{
+    top: 0.4em;
+    position: relative;
+    left: 0.2em;
+    font-family:Poppins;
+    font-weight: 800;
+    font-size: 1.3em;
+    color: #ff4f7b;
+}
+
+.about-header-text{
+    position: absolute;
+    right: 8em;
+    font-family:Poppins;
+    font-weight: bolder;
+    font-size:x-large;
+    
+    top: -0.2em;
+    border-radius: 1em;
+    background-color: auto;
+    width: max-content;
+    letter-spacing: 00.01em;
+    color: whitesmoke;
+}
+
+.about-header-click-me{
+    width: 8em;
+    height: 2em;
+    background-color: white;
+    position:absolute;
+    text-align: center;
+    justify-content: center;
+    padding-top: 0.25em;
+    padding-bottom: 1em;
+    font-family:Poppins;
+    top: 8.5em;
+    color: #57bef5;
+    font-weight: 900;
+    border-radius: 1em;
+}
+
+.triangle-header{
+    color: white;
+    position: absolute;
+    top: 8em;
+    right: 3.5em;
+    size: 3em;
+}

@@ -1,7 +1,4 @@
 import React from 'react'
-import background from './image/cloud.jpg'
-import char from './image/aboutme-char.png'
-import avatar from './image/pfp.gif'
 import {useState} from 'react';
 import Tilty from 'react-tilty'
 import {IoMdClose} from 'react-icons/io'
