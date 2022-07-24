@@ -5,9 +5,7 @@
     width: 23.25em;
     height: 7.5em;
     border-radius: 0 0 0 3.25em;
-    box-shadow: 0 0 0.5em 0 #57bef5;
-
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.6);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
     background: rgba(251, 251, 251, 0.3);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -41,7 +39,7 @@
     border-radius: 1em 1em 1em 3em;
     border-color: #ff4f7b;
     border-width: 0.34em;
-    border-style: solid;
+    border-style: ridge;
     text-align:center;
 }
 
@@ -61,13 +59,19 @@
     font-family:Poppins;
     font-weight: bolder;
     font-size:x-large;
-    
-    top: -0.2em;
-    border-radius: 1em;
+    background-color:white;
+    border-radius: 0.5em 2em 0.2em 0em;
     background-color: auto;
     width: max-content;
     letter-spacing: 00.01em;
-    color: whitesmoke;
+    color:#57bef5 ;
+    padding: 0.2em 0.7em 0.2em 0.6em;
+    letter-spacing:0.1m;
+    border-color: #57bef5;
+    border-width:0.3em ;
+    top: -0.6em;
+    right: 6.3em;
+    border-style:ridge
 }
 
 .about-header-click-me{
@@ -84,6 +88,7 @@
     color: #57bef5;
     font-weight: 900;
     border-radius: 1em;
+
 }
 
 .triangle-header{

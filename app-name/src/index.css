@@ -28,15 +28,17 @@ html, body { height: 100%; }
 .upper-bg{
   width: 100%;
   height: 55%;
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(130, 212, 253) 37%, #0462C4 100%);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(191, 234, 255) 37%, #0462C4 100%);
   position: absolute;
 }
 .bottom-bg{
   bottom:0px;
+  
   width: 100%;
   height: 40%;
   position: absolute;
-  background-image: linear-gradient(180deg, rgba(255,0,0,0) 0%, rgb(255, 255, 255) 70%);
+
+  background-image: linear-gradient(180deg, rgba(255,0,0,0) 0%, rgb(238, 246, 255) 75%);
 }
 .circle-outer{
   top: 5%;
@@ -82,10 +84,10 @@ html, body { height: 100%; }
   bottom:0px;
   width:100vw;
   height:3%;
-  background-image: linear-gradient(180deg, rgba(255,0,0,0) 0%, rgb(255, 255, 255) 20%);
+  background-color: white;
   position:absolute;
   box-sizing: border-box;
-  display: flex;
+  display: flex;  
   text-align: center;
   justify-content: center;
   padding-top: 8px;
@@ -148,6 +150,13 @@ html, body { height: 100%; }
   z-index:100 ;
 }
 
+.wave-effect{
+  position: absolute;
+
+  width: 100%;
+  height: 25em;
+  bottom: -8em;
+}
 /* navbar ------------------------------------------------------------------------------------ */
 .sidebar{
   box-sizing:border-box;

@@ -30,7 +30,7 @@ export default function AboutMeHeader({ContextApi}) {
                         : ''}
                         <div className="about-header-info">
                             <p>
-                                Aozora.sol<span>#420</span>
+                                Aozora.sol<span>#0420</span>
                             </p>
                         </div>
                         <p className='about-header-text'>
